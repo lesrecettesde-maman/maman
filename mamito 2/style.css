@@ -1,0 +1,454 @@
+/* Variables globales pour un style cohérent */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #ff4040;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --highlight-color: #fffb00;
+    --button-hover: #45a049;
+  }
+  
+  /* Réinitialisation globale */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+  }
+  
+  /* En-tête */
+  header {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Background gradient */
+  }
+  
+  nav a:hover {
+    background-color: var(--highlight-color);
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  /* Style du menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  /* Section About Us */
+  .about-section {
+    background-image: url("photo/DALL·E\ 2024-12-22\ 23.48.54\ -\ A\ beautiful\ and\ elegant\ kitchen\ background\ with\ soft\ lighting\,\ wooden\ cabinets\,\ marble\ countertops\,\ and\ a\ cozy\ atmosphere.\ The\ scene\ includes\ fresh\ in.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 30px;
+    margin: -20px;
+    position: relative;
+  }
+  h1 {
+    font-family: 'Georgia', serif; /* Une police élégante */
+    font-size: 3rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #ff4040; /* Couleur vive qui attire l’attention */
+    text-align: center; /* Centre le titre */
+    text-transform: uppercase; /* Met tout en majuscule */
+    letter-spacing: 3px; /* Espacement entre les lettres */
+    margin: 20px 0; /* Espace autour du titre */
+    padding: 10px 20px; /* Espace intérieur pour un meilleur focus */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Dégradé de fond */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    display: inline-block; /* Ajuste la largeur au texte */
+}
+
+  .about-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  /* Grille pour les sections */
+  #section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2em;
+    margin: auto;
+    max-width: 1200px;
+  }
+  
+  .section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .section:hover {
+    transform: scale(1.05);
+  }
+  
+  .sectionimage {
+    width: 100%;
+    
+    border-radius: 10px;
+    margin-bottom: 1em;
+  }
+  /* Style spécifique pour la section 'pain' */
+#section .pain {
+    /* Forcer une hauteur uniforme pour la section */
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Ajuster l'image si nécessaire */
+  #section .pain .sectionimage {
+    height: 100px; /* Ajuster la taille de l'image pour uniformiser les sections */
+    object-fit: cover; /* Garder l'image proportionnelle et bien ajustée */
+    margin-bottom: 1em;
+  }
+  
+  /* Ajuster le bouton et le texte */
+  #section .pain .recipe-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #section .pain .see {
+    padding: 0.5em 1.5em;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #section .pain .see:hover {
+    background-color: var(--button-hover);
+  }
+  button.see.section {
+    padding: 0.5em 1.5em;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.see.section:hover {
+    background-color: var(--button-hover);
+  }
+  
+  /* Section Contact */
+  #contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-top: 5px solid #ddd;
+  }
+  
+  #contact h2 {
+    font-size: 28px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  #contact p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    min-width: 120px;
+  }
+  
+  .social-btn.instagram {
+    background-color: #E1306C;
+  }
+  
+  .social-btn.whatsapp {
+    background-color: #25D366;
+  }
+  
+  .social-btn.tiktok {
+    background-color: black;
+  }
+  
+  .social-btn.facebook {
+    background-color: #1877F2;
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Pied de page */
+  footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav a {
+      font-size: 14px;
+      margin: 0 10px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about-content {
+      font-size: 1rem;
+    }
+  }
+  /* Header Styles */
+header {
+  background-color: #ff4040;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--highlight-color);
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Style du menu déroulant */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Main Section */
+main {
+  padding: 20px;
+}
+/* Styles Responsives */
+@media (max-width: 1024px) {
+  .recipe {
+    width: 45%;
+  }
+
+  .about-content {
+    font-size: 1em;
+    padding: 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recipe {
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .about-section {
+    padding: 40px 20px;
+  }
+
+  #contact h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .about-content {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+.add-to-cart {
+  background-color: #f8b400;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#cart-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+#checkout {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
